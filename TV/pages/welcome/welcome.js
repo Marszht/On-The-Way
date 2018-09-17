@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    remind: '加载中',
 
   },
 
@@ -19,7 +20,12 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    // 加载完一秒后 就清除
+    setTimeout(() => {
+      this.setData({
+        remind: ''
+      })
+    }, 1000);
   },
 
   /**

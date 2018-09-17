@@ -1,1 +1,32 @@
 /* pages/welcome/welcome.wxss */
+
+page {
+    font-family:  -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 150%;
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+}
+.container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #2dc799;
+    align-items: stretch;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.content {
+    flex: 1;
+    display: flex;
+    position: relative;
+    z-index: 10;
+    flex-direction: column;
+}
+

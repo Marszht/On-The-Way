@@ -1,9 +1,17 @@
 <!--pages/welcome/welcome.wxml-->
 <view class="container">
     <view class="remind-box" wx:if="{{remind}}">
-        <image class="remind-img" src="../../images/more/loading.gif"></image>
+        <image class="remind-img" src="../../images/more/loading.gif">aaa</image>
     </view>
     <block wx:else>
         <image class="title" src="../../images/more/title8.png"></image>
+        <view class="content">
+            <view class="hd" style="transform: rotateZ{{ angle }}deg"></view>
+            <image class="log" src="{{ userInfo.acatarUrl }}"></image>
+            <image class="lwave" src="../../images/more/wave.png" mode="aspectFill"></image>
+             </view>
+            <view class="bd">
+                <image class="smalltitle" src="../../images/more/confirm-world1.png"></image>
+            </view>
     </block>
 </view>
