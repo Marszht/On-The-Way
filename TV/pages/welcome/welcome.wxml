@@ -7,11 +7,15 @@
         <image class="title" src="../../images/more/title8.png"></image>
         <view class="content">
             <view class="hd" style="transform: rotateZ{{ angle }}deg"></view>
-            <image class="log" src="{{ userInfo.acatarUrl }}"></image>
-            <image class="lwave" src="../../images/more/wave.png" mode="aspectFill"></image>
+            <image class="logo" src="{{ userInfo.acatarUrl }}"></image>
+            <image class="wave" src="../../images/more/wave.png" mode="aspectFill"></image>
              </view>
             <view class="bd">
-                <image class="smalltitle" src="../../images/more/confirm-world1.png"></image>
+                <image class="smalltitle" src="../../images/more/confirm-word1.png"></image>
+                <view class="confirm-btn" bindtap="gotoIndex">
+                    <text>进入狗窝</text>
+                </view>
+                <text class="copyright">欢迎体验狗蛋Tv-关注微博@我吃西红柿</text>
             </view>
     </block>
 </view>
