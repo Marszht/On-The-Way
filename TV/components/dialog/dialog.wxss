@@ -1,0 +1,9 @@
+/* components/dialog/dialog.wxss */
+.dialog_mask {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    z-index: 666;
+    position: fixed;
+    flex-flow: column nowrap;
+}
