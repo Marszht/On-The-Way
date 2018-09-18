@@ -1,0 +1,23 @@
+<!--pages/find/find.wxml-->
+<view class="wrap">
+  <search class="search" isTo="{{ true }}"/>
+  <view class="tab">
+    <view class="tab_left">
+      <view 
+        wx:for="{{ leftList }}" 
+        wx:key="index" 
+        data-index="{{ index }}"
+        data-id="{{ item.id }}"
+        class="tab_item {{ leftIndex === index ? 'tab_active' : ''}}" 
+        bindtap="tabLeft"
+        >
+        {{ item.name }}
+      </view>
+    </view>
+    <view class="tab_right">
+      <block wx:for="{{ oCid[ cid ] }}" wx:key="index" >
+        <card item="{{ item }}" />
+      </block>
+    </view>
+  </view>
+</view>

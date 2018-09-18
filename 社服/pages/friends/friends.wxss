@@ -1,0 +1,37 @@
+/* pages/friends/friends.wxss */
+/* ::-webkit-scrollbar{  
+    height: 0;
+    width: 0;
+    color: transparent;
+  } */
+.firends:first-child {
+    height: 98rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 0.5px solid #d6d6d6;
+    border-bottom: 0.5px solid #d6d6d6;
+}
+.firends {
+    height: 98rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 0.5px solid #d6d6d6;
+}
+.firends image  {
+   /* background: greenyellow; */
+   border-radius: 50%;
+   height: 73rpx;
+   width: 73rpx;
+   margin-left: 24rpx;
+}
+ .name {
+    display: flex;
+    display: inline-block;
+    align-items: center;
+    margin-left: 32rpx;
+    font-size: 28rpx;
+}

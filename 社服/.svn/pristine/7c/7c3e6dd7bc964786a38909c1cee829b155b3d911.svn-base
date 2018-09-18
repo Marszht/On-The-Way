@@ -1,0 +1,131 @@
+/* pages/my/my.wxss */
+/* pages/my/my.wxss */
+
+page{
+  background: #ebebeb;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+.user_info{
+  width: 100%;
+  height: 370rpx;
+  position: relative;
+  background: #f65b53;
+  margin-bottom:80rpx;
+} 
+.user_info .avatar{
+  display: inline-block;
+  width: 140rpx;
+  height: 140rpx;
+  margin: 40rpx 24rpx;
+  border-radius: 50%;
+  border: 4rpx solid #FFF;
+}
+
+.user_info .user_nick_name {
+  display: inline-block;
+  font-size: 34rpx;
+  color: rgb(255,255,255);
+  position: absolute;
+  top: 94rpx;
+  margin-left: 19rpx;
+  }
+  .order_sn{
+    position:absolute;
+    left:50%;
+    bottom:-60rpx;
+    width:700rpx;
+    height:230rpx;
+    transform:translateX(-50%);
+    background:#fff;
+    border-radius: 12rpx;
+    z-index:998;
+  }
+  .head {
+    height: 88rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .order {
+    height: 88rpx;
+   display: flex;
+   /* justify-content: space-between; */
+   align-items: center;  
+   margin-left: 26rpx;
+   border-bottom: 1px solid rgb(242, 242, 242) ; 
+   font-size: 28rpx;
+   color: rgb(0,0,0);
+  }
+  .see-all {
+    display: flex;
+    justify-content: center;
+    margin-right: 26rpx;
+    font-size: 24rpx;
+    color: rgb(152, 152, 152)
+  }
+  .tickets {
+    display: flex;
+    height: 145rpx;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+ .tickets .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  items .txt {
+    font-size: 24rpx;
+    color: rgb(0,0,0)
+  }
+
+
+  /* .content {
+    height: 232rpx;
+    z-index: 1;
+    width: 700rpx;
+    position: absolute;
+    border-radius: 10%;
+    border: 2rpx solid #fff; 
+  } */
+  .item{
+    height: 89rpx;
+    width: 100%;
+    line-height: 89rpx;
+    background: #fff;
+    position: relative;
+    border: 1px solid rgb(242, 242, 242) 
+  }
+  .item .item_icon {
+    width: 30rpx;
+    height: 27rpx;
+    margin-left: 27rpx;
+    vertical-align: middle;
+  }
+  .item .content {
+    display: inline-block;
+    margin-left: 23rpx;
+    line-height: 28rpx;
+    height: 27rpx;
+    font-size: 28rpx;
+    font-weight: 550;
+  }
+  .content:after {
+    content: '';
+    position: absolute;
+    top: 35rpx;
+    right: 35rpx;
+    width: 20rpx;
+    height: 20rpx;
+    border: 3rpx solid rgb(177, 177, 177);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotateZ(45deg);
+    z-index:9;
+  }
+  .spacebetween {
+    margin-top: 22rpx;
+  }

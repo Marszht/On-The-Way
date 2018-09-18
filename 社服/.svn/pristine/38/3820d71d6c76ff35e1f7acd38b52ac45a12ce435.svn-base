@@ -1,0 +1,23 @@
+<!--pages/shopMap/shopMap.wxml-->
+<!-- <map 
+  scale="{{scale}}" 
+  markers="{{markers}}" 
+  class="map" 
+  latitude="23.2142530298"
+  longitude="113.2765980597"
+  >
+</map> -->
+<map id="map" 
+  latitude="{{ address.latitude }}"
+  longitude="{{ address.longitude }}"
+  scale="100" 
+  controls="{{controls}}"
+  bindcontroltap="controltap" 
+  markers="{{markers}}" 
+  bindmarkertap="markertap" 
+  polyline="{{polyline}}" 
+  bindregionchange="regionchange" 
+  show-location 
+  style="width: 100%; height: 100%;"
+  >
+</map>

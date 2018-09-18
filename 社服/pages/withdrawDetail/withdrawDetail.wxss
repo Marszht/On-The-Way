@@ -1,0 +1,90 @@
+/* pages/withdrawDetail/withdrawDetail.wxss */
+.contatiner {
+    border-top: 1rpx solid #f2f2f2;
+ 
+}
+.contatiner .steps {
+    height: 547rpx;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 62rpx;
+    background: white;
+    border-bottom:  1rpx solid #f2f2f2;
+    position:relative;
+    z-index:5;
+
+    /* background:#ccc; */
+ 
+}
+.steps::before{
+  content:"";
+  display:block;
+  position:absolute;
+  left:75rpx;
+  border-left:1rpx dashed #333;
+  height:70%;
+}
+.step_content{
+  position:relative;
+  z-index:1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* margin-left: 37rpx; */
+    /* justify-content: center; */
+}
+.steps .changeState .step-icon {
+    height: 45rpx;
+    width: 45rpx;           
+    background-color: #d81f06;
+}
+.step_content .step-icon {
+    height: 27rpx;
+    width: 27rpx;
+    background-color: #b2b2b2;
+    border-radius: 50%;
+    /* margin-left: 30rpx; */
+    
+}
+.steps .changeState .info {
+    color: black;
+}
+.step_content .info {
+    margin-left: 37rpx;
+    font-size: 28rpx;
+    color: rgb(152, 152, 152)
+   
+}
+.foot {
+    margin-top: 60rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* align-items: center; */
+}
+.foot_one{
+    display: flex;
+    align-items: center;
+    padding-top: 31rpx;
+    margin-left:62rpx ;
+    margin-right: 52rpx;
+    justify-content: space-between;
+
+}
+.foot_info{
+color: rgb(152, 152, 152)
+}
+button {
+    margin: 83rpx 87rpx ;
+    /* margin-left: 87rpx; */
+    background: #e02f23; 
+    border-radius: 90rpx;
+    /* margin-top: 30rpx; */
+}
+.btn_complete .btn_txt {
+    color: white;
+    font-size: 36rpx;
+}

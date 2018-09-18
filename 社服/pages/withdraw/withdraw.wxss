@@ -1,0 +1,100 @@
+/* pages/withdraw/withdraw.wxss */
+page{
+    background: #ebebeb;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
+ .container .space_between {
+    margin-top: 22rpx;
+  }
+  .withdraw_type{
+      height: 153rpx;
+      width: 100%;
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      /* align-items: center; */
+      flex-direction: column;
+      
+  }
+  .withdraw_type .head {
+      display: flex;
+      align-items: center;
+      /* justify-content: center; */
+      margin-left: 28rpx;
+  }
+  .head image {
+      height: 57rpx;
+      width: 71rpx;
+  }
+  .head .name {
+    font-size: 24rpx;
+    margin-left: 20rpx;
+  }
+  .withdraw_type .type_name {
+    margin-left: 28rpx;
+    color: rgb(152,152,152);
+    font-size: 22rpx;
+  }  
+  /* .withdraw_type:after {
+    content: '';
+    position: absolute;
+    top: 60rpx;
+    right: 35rpx;
+    width: 20rpx;
+    height: 20rpx;
+    border: 3rpx solid rgb(177, 177, 177);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotateZ(45deg);
+    z-index:9;
+  } */
+  .withdraw_count {
+      height: 127rpx;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      background: white;
+  }
+  .withdraw_count .content {
+      margin-left: 28rpx;
+      font-size: 28rpx;
+  }
+  .content .text {
+      font-style: 28rpx;
+  }
+  .withdraw_foot {
+      display: flex;
+      height: 75rpx;
+      background: white;
+      border-top: 1px solid rgb(242, 242, 242) ;
+      align-items: center;
+      /* justify-content: center; */
+      /* margin-left: 28rpx; */
+      padding-left: 28rpx;
+      font-size: 28rpx;
+      color: rgb(152,152,152);
+    }
+    .activity.withdraw_foot {
+        color: #e02f23;
+        font-size: 28rpx;
+    }
+
+    .increase_ount {
+       display: inline;
+    }
+    .increase_ount, .info {
+        margin-left: 28rpx;
+        overflow: hidden;
+    }
+button {
+    margin: 83rpx 87rpx ;
+    /* margin-left: 87rpx; */
+    background: #e02f23; 
+    border-radius: 90rpx;
+}
+.btn_withdraw .btn_txt {
+    color: white;
+    font-size: 36rpx;
+}

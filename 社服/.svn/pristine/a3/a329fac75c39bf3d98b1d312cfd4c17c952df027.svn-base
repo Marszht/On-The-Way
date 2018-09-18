@@ -1,0 +1,15 @@
+<!-- pages/collections/collections.wxml -->
+<scroll-view scroll-y>
+    <block wx:for="{{collectionLists}}">
+        <view class="col_content">
+            <image class="col_img" src="{{item.img}}"></image>
+            <view class="col_info">
+                <text class="col_info-des">{{item.des}}</text>
+                <view class="col_info_foot">
+                    <view class="col_info-price">￥{{item.price}}</view>
+                    <text class="col_info-same">找相似</text>
+                </view>
+            </view>
+        </view>
+    </block>
+</scroll-view>

@@ -1,0 +1,17 @@
+<!--components/tab/tab.wxml-->
+<view class="wrap">
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <view 
+      wx:for="{{ tab }}" 
+      wx:key="index"
+      class="tab-item {{currentTab== index ?'active':''}}"  
+      data-current="0" 
+      bindtap="swichNav"
+      >
+      {{ item }}
+    </view>
+  </scroll-view>
+  
+  <slot></slot>
+
+</view>

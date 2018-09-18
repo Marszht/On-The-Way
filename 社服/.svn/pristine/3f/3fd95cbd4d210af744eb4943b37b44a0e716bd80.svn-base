@@ -1,0 +1,65 @@
+/* pages/mypurse/purse.wxss */
+page{
+    background: #ebebeb;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
+.content{
+    width: 100%;
+    height: 370rpx;
+    position: relative;
+    background: #ff7269;
+  }
+  .content .detail {
+      float: right;
+      margin-top: 36rpx;
+      margin-right: 30rpx;
+      font-size: 28rpx;
+      color: #fff;
+  }
+  .content .restMoney {
+      float: left;
+      margin-top: 84rpx;
+      margin-left: 27rpx;
+      color: #fff;
+  }
+  .content .symbol {
+    font-size: 34;
+    color: #fff;
+    margin-left: -168rpx;
+  }
+  .item{
+    height: 89rpx;
+    width: 100%;
+    line-height: 89rpx;
+    background: #fff;
+    position: relative;
+    border: 1px solid rgb(242, 242, 242) 
+  }
+  .item .item_icon {
+    width: 30rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    margin-left: 27rpx;
+    vertical-align: middle;
+  }
+  .item .text {
+    display: inline-block;
+    margin-left: 23rpx;
+    line-height: 28rpx;
+    height: 28rpx;
+    font-size: 28rpx;
+    font-weight: 550;
+  }
+  .text:after {
+    content: '';
+    position: absolute;
+    top: 35rpx;
+    right: 35rpx;
+    width: 20rpx;
+    height: 20rpx;
+    border: 3rpx solid rgb(177, 177, 177);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotateZ(45deg);
+  }

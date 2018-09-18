@@ -1,0 +1,7 @@
+<!--pages/login/login.wxml-->
+<view class="wrap">
+  <button open-type="getUserInfo" wx:if="{{ btnFlag }}" bindgetuserinfo="getUserInfo" type="warn"> 点 击 登 录 </button>
+  <view wx:else>
+    欢迎访问
+  </view>
+</view>

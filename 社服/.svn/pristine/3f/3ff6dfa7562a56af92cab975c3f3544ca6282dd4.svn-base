@@ -1,0 +1,42 @@
+<!--pages/help/ceng/ceng.wxml-->
+<view class="tc_help">
+  <image class="tc_help_bg" src="../../../static/img/help_bg.png"></image>
+  <view class="tc_help_content ">
+    <view class="tcp_tip" bindtap="show"><image src='../../../static/img/help_tip.png'></image><text> 活 动 规 则 </text></view>
+    <view class="tcp_img" style="background:url({{ avatarUrl }}) no-repeat center/cover">
+      <image src="../../../static/img/help_header.png"></image>
+      <view class="tcp_img_tip" style="background:url(../../../static/img/help_img_tip.png) no-repeat center/cover">
+        {{ isSelf ? '累积分享好友帮我支付 可以领取奖励哟 ~' : '支付 1 元，助力好友 免费享受美容服务' }}
+      </view>
+    </view>
+    <view class="tcp_line">
+      <view class="tcp_line_animation" style="width:{{ leng + '%'}}"></view>
+      <view class="tcp_box">
+        <image src="../../../static/img/help_box.png"></image>
+      </view>
+    </view>
+    <view class="tcp_btn" bindtap="bindBtn" > {{ isSelf ? '分享领奖品' : '帮 Ta 助力' }} </view>
+  </view>
+
+  <view class="tcp_share" hidden="{{ !isSelf }}">
+    <view class="tcp_share_title">分享记录</view>
+    <view class="tcp_share_item" wx:for="{{ list }}" wx:key="index">
+      <view class="tcp_header">
+        <image src="../../../static/img/default.jpg"></image>
+        <view>
+          <view class="user_name">{{ item.name }}</view>
+          <view class="user_timer">{{ item.timer }}</view>
+        </view>
+      </view>
+      <view class="user_pay">{{ item.pay }}</view>
+    </view>
+  </view>
+  <view class="toast" hidden="{{ activity }}" bindtap="show">
+    <view class="activity">
+      <view class="act_title">
+        活动规则
+      </view>
+      <view class="act_content">{{ active }}</view>
+    </view>
+  </view> 
+</view>

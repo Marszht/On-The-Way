@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="wrap">
+  <swiper indicator-dots autoplay interval="2000" circular class="swiper">
+    <block wx:for="{{ swiper }}" wx:key="*this">
+      <swiper-item>
+        <image src="http://pic1.win4000.com/wallpaper/c/53b4b8275474b.jpg" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="ad">
+    <image src="../../static/img/address.png" class="address"></image>
+    <view class="ad_txt">地址：广州市白云区江夏地址强盛大厦B栋</view>
+    <image src="../../static/img/tel.png" class="tel"></image>
+  </view>
+
+  <view class="tab_wrap">
+    <view class="tab_title_wrap">
+      
+    </view>
+  </view>
+
+</view>

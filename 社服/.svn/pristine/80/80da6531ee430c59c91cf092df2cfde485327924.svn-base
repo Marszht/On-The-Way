@@ -1,0 +1,8 @@
+export const HOST = 'http://192.168.31.199/';
+
+export const LOGIN = HOST + 'wechat/user/login';
+export const INDEX = HOST + 'ad';
+export const FINDCAT = HOST + 'service/cat';
+export const SEARCH = HOST + 'service/cat/s';
+export const CHEERTAP = HOST + 'help/cheer';
+export const CHEER = HOST + 'help/cheer/detail'
