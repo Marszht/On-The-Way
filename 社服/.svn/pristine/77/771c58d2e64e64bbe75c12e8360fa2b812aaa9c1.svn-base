@@ -1,0 +1,21 @@
+<!--pages/mypurse/purse.wxml-->
+<view class="container">
+<view class="content">
+  <view class="head">
+<view class="detail" bindtap="showDetail">明细</view>
+<text class="restMoney">余额账户 (元)</text>
+</view>
+<view class="money">
+<text class="symbol">￥</text>
+<view class="balance">{{ balance }}</view>
+</view>
+</view>
+
+<!-- 提现 -->
+   <navigator url="../withdraw/withdraw?balance={{balance}}" open-type="navigate">
+   <view class="item">
+     <image class="item_icon" src="../../static/img/my/purse.png"></image>
+     <text class="text">提现</text>
+   </view>
+   </navigator>
+</view>

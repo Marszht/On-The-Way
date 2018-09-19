@@ -1,0 +1,59 @@
+/* pages/yongDetail/yongDetail.wxss */
+page{
+    background: #ebebeb;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
+  .content{
+    width: 100%;
+    height: 370rpx;
+    background: #ff7269;
+  }
+ .income {
+      display: inline-block;
+
+  }
+  .income .yes_income {
+      text-align: center;
+      margin-top: 65rpx;
+      font-size: 24rpx;
+      color: #fff;
+  }
+  /* .content  */
+  .bill_list {
+  }
+  .item{
+    height: 89rpx;
+    width: 100%;
+    line-height: 89rpx;
+    background: #fff;
+    position: relative;
+    border: 1px solid rgb(242, 242, 242) 
+  }
+  .item .item_icon {
+    width: 30rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    margin-left: 27rpx;
+    vertical-align: middle;
+  }
+  .item .text {
+    display: inline-block;
+    margin-left: 23rpx;
+    line-height: 28rpx;
+    height: 28rpx;
+    font-size: 28rpx;
+    font-weight: 550;
+  }
+  .text:after {
+    content: '';
+    position: absolute;
+    top: 35rpx;
+    right: 35rpx;
+    width: 20rpx;
+    height: 20rpx;
+    border: 3rpx solid rgb(177, 177, 177);
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotateZ(45deg);
+  }

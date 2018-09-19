@@ -1,0 +1,11 @@
+<!--pages/details/details.wxml-->
+<view class="wrap">
+  <swiper indicator-dots autoplay interval="2000" circular class="swiper">
+    <block wx:for="{{ info.banners }}" wx:key="index">
+      <swiper-item>
+        <image src="{{ item.pic }}" class="slide-image" title="{{ item.title }}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  {{ id }}
+</view>

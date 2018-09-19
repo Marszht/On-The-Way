@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "助力加油",
+  "usingComponents":{
+    "li-ceng":"./ceng/ceng"
+  }
+}

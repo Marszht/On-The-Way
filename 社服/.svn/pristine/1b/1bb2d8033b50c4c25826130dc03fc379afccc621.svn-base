@@ -1,0 +1,24 @@
+<!--components/search/search.wxml-->
+<view class="search">
+  <view class="s_nav">
+
+    <view class="icon">
+      <image src="../../static/img/search/search.png"></image>
+    </view>
+    <input 
+      bindinput="input" 
+      focus 
+      value="{{ value }}"
+      placeholder="请输入您要搜索的物品" 
+      class="input" 
+      wx:if="{{ !isTo }}"
+      >
+    </input>
+    <view class="toInput" wx:else>请输入您要搜索的物品</view>
+    <view bindtap="clear" class="clear">
+      <image wx:if="{{ key }}" src="../../static/img/search/clear.png"></image>
+    </view>
+    <view class="btn" bindtap="btn">搜索</view>
+  </view>
+  <view class="is_to" hidden="{{ !isTo }}" bindtap="toSearch"></view>
+</view>

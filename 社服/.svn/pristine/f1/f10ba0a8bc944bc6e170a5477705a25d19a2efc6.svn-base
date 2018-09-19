@@ -1,0 +1,17 @@
+<!-- pages/checkDetail/checkDetail.wxml -->
+<scroll-view scroll-y>
+    <view class="wrap">
+        <block wx:for="{{ checkList }}" wx:key="id">
+            <view class="checkDetail last_child">
+                <view class="checkDetail-type">
+                <view class="checkDetail_des">{{ item.title}}</view>
+                <view class="checkDetail_income ">{{item.money}}</view>
+                </view>
+                <view class="time">
+                    <view class="type_day">{{ item.trade_time }}</view>
+                    <view class="type_hour">{{ item.hour }}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</scroll-view>

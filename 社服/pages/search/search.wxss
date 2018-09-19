@@ -1,0 +1,17 @@
+/* pages/search/search.wxss */
+.wrap{
+  display:flex;
+  flex-direction:column;
+  background:#f2f2f2;
+}
+.result{
+  flex:1;
+  overflow-y:auto;
+  box-sizing:border-box;
+  padding:0 15rpx;
+}
+.none{
+  text-align:center;
+  margin-top:60rpx;
+  color:#999;
+}

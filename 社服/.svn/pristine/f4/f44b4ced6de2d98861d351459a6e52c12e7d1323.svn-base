@@ -1,0 +1,2 @@
+<!--pages/shopMap/shopMap.wxml-->
+<map scale="{{scale}}" markers="{{markers}}" class="map"></map>

@@ -1,0 +1,61 @@
+    /* pages/collections/collections.wxss */
+
+    .col_content {
+        display: flex;
+        align-items: center;
+        height: 251rpx;
+        width: 100%;
+        border: 1px solid rgb(242, 242, 242);
+
+
+    }
+
+    image.col_img {
+        margin-left: 45rpx;
+        /* display: block; */
+        height: 177rpx;
+        width: 177rpx;
+    }
+
+    .col_info {
+        display: flex;
+        /* align-items: center; */
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 65rpx;
+        width:426rpx;  
+    }
+    .col_info .col_info-des {
+        font-size: 28rpx;
+        /* 超出则隐藏 然后分为两行 */
+        display: -webkit-box; 
+        -webkit-box-orient: vertical; 
+        -webkit-line-clamp:2;
+         overflow: hidden; 
+    }
+
+    .col_info_foot {
+        /* padding-right: 26rpx; */
+        padding-right: 40rpx;
+        /* height: 120rpx; */
+        padding-top: 90rpx;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .col_info-col {
+        font-size: 22rpx;
+        height: 33rpx;
+        width: 95rpx;
+        border: 1rpx solid rgb(152, 152, 152);
+        color: rgb(152, 152, 152);
+        border-radius: 7rpx;
+        text-align: center;
+    }
+
+    .col_info-price {
+        color: #e02e24;
+        font-size: 28rpx;
+    }

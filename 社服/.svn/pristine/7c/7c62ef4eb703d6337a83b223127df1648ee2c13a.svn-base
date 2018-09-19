@@ -1,0 +1,44 @@
+/* pages/checkDetail/checkDetail.wxss */
+
+.checkDetail {
+    border-top: 1rpx solid rgb(177, 177, 177);
+    height: 110rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.last_child:last-child {
+    border-bottom: 1px solid  rgb(177, 177, 177);
+}
+
+.checkDetail-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 23rpx;
+}
+
+.type_day {
+    margin-left: 29rpx;
+    color: #989898;
+}
+
+.checkDetail_income {
+    color: #e02f22;
+    margin-right: 23rpx;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+
+}
+
+.type_income {
+    color: rgb(101, 101, 101);
+}
+
+.type_hour {
+    margin-left: 20rpx;
+}

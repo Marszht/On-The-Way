@@ -1,0 +1,8 @@
+<!--pages/friends/friends.wxml-->
+<view class="wrap">
+  <view class="firends" wx:for="{{ list }}" wx:key="index">
+    <image src="{{ item.avatarUrl }}"/>
+    <text class="name">{{ item.nickName }}</text>
+  </view>
+</view>
+

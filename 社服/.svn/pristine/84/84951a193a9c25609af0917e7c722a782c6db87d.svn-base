@@ -1,0 +1,32 @@
+<!-- pages/withdraw/withdraw.wxml -->
+<view class="container">
+    <view class="space_between"></view>
+    <view class="withdraw_type">
+        <view class="head" bindtap="showAction">
+            <image src="../../static/img/my/wechat.png" mode="aspectFill" />
+            <text class="name">微信</text>
+        </view>
+        <view class="type_name">微信钱包</view>
+    </view>
+
+    <!-- 提现金额 -->
+    <view class="space_between"></view>
+    <view class="withdraw_count">
+        <view class="content">
+        <text class="text">提现金额</text>
+        <!-- 要提现 的金额 -->
+        <input type="digit"  value="{{account}}"  auto-focus bindinput="accountChange"/>
+        </view>
+    </view>
+    
+    <view class="withdraw_foot " wx:if="{{ balance>0 }}">还可提现金额 {{ balance-account }} </view>
+    <view class="activity withdraw_foot" wx:else>输入金额超过钱包余额</view>
+    <view class="space_between"></view>
+    <text class="info">账户金额{{ balance }}，提现额度 1000.00元 </text>
+    <view class="increase_ount" style="font-size: 24prx; color: rgb(224,46,36)" bindtap="showToast">提升额度</view>
+
+    <!-- button -->
+    <button class="btn_withdraw" bindtap="withdraw">
+    <text class="btn_txt" >立即提现</text>
+    </button>
+</view>

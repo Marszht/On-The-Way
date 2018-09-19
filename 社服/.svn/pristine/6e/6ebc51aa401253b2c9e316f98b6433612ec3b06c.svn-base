@@ -1,0 +1,45 @@
+<!--pages/help/help.wxml-->
+<view class="wrap {{ tabIndex !== 2 ? '' : 'other'}} ">
+  <!-- <view class="ad">
+    <image src="{{ adImg }}"></image>
+  </view> -->
+  <view class="tab_title_wrap">
+    <view 
+      wx:for="{{ tab }}" 
+      wx:key="index" 
+      data-index="{{ index }}"
+      bindtap="changeTab"
+      class="tab_title {{ index ? 'right_line' : '' }} {{ index === tabIndex ? 'active' : '' }}" 
+      >
+      {{ item.text }}
+    </view>
+  </view>
+
+  <view class="tab_content_wrap" wx:if="{{ tabIndex !== 2 }}">
+    <view 
+      wx:for="{{ tab[ tabIndex ].children }}"
+      wx:key='index'
+      class="tab_content"
+      data-id="{{ item.id }}"
+      bindtap="goDetails"
+      >
+      <image src="{{ item.img }}"/>
+      <view class="tc_title">{{ item.name }}</view>
+      <view class="tc_item">
+        <view>
+          <text class="active_price">￥{{ item.group_price }} </text>
+          <text class="price"> ￥{{ item.single_price }}</text>
+        </view>
+        <view class="require">{{ item.group_num }}</view>
+        <view class="is_activity_wrap">
+          <text class="is_activity {{ item.status === 1 ? '' : 'activity' }}">{{ item.status === 1 ? '去开团' : item.status === 2 ? '已结束' : '未开始' }}
+</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="tab_content_wrap tc_help " wx:else>
+    <li-ceng avatarUrl="{{ avatarUrl }}" isSelf="{{ !isSelf }}" list="{{ tab[ tabIndex ].children }}" leng="{{ leng }}" />
+  </view>
+</view>
