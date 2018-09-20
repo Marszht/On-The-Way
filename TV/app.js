@@ -34,6 +34,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    movieBase: 'https://api.adline.com.cn'
   }
 })

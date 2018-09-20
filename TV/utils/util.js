@@ -1,19 +1,19 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
+const wxPrase = require("./wxPrase/wxPrase.js").wxPrase  // 解决HTML 以及 markdown 的解析
 
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-}
-
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
+// 获取数据方法
+const $get = ( url, data ) => {
+  return new Promise( (resolve, reject) => {
+    wx.request({
+      url,
+      data,
+      header: { 'Content-Type': 'json' },
+      success: resolve,
+      fail: reject
+    })
+  })
 }
 
 module.exports = {
-  formatTime: formatTime
+  wxPrase,
+  $get
 }
