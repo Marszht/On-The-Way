@@ -1,2 +1,10 @@
 <!--pages/videos/videos.wxml-->
-<import src="../components/item-template.wxml"/>
+<import src="../../components/item/item-template.wxml"/>
+<import src="../../components/swiper/swiper-template"/>
+<view class="bg">
+<template is="swiperTemplate" data="{{ swiperList: swiperList, isTitle: true}}"/>
+<view class=" vertical-movie-module">
+<text class="title">为您推荐</text>
+</view>
+   </view>
+

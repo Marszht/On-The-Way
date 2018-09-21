@@ -1,5 +1,5 @@
 // pages/videos/videos.js
-const util = require('../../utils/utils.js')
+const util = require('../../utils/util.js')
 const app = getApp();
 const movieUrl = app.globalData.movieBase
 Page({
@@ -9,27 +9,32 @@ Page({
    */
   data: {
     movieList: null,
-    article_id: 0
+    article_id: 0,
+    swiperList: null,
 
   },
-getList() {
-  util.$get(
-    `${movieUrl}/api/v2/article`,
-    {
-      app_id: 6,
-      cid: 4,
-      article_id: this.data.article_id
-    }).then( res => {
-      let { status } = res.data
-      if ( status === 0) {
-        // this
-      }
-    })
-},
+// getList() {
+//   util.$get(
+//     `${movieUrl}/api/v2/article`,
+//     {
+//       app_id: 6,
+//       cid: 4,
+//       article_id: this.data.article_id
+//     }).then( res => {
+//       let { status } = res.data
+//       if ( status === 0) {
+//         // this
+//       }
+//     })
+// },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 加载轮播图
+    this.initSwiper();
+   
+
 
   },
 
@@ -37,7 +42,7 @@ getList() {
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+   //   console.log(this.data.swiperList)
   },
 
   /**
@@ -80,5 +85,36 @@ getList() {
    */
   onShareAppMessage: function () {
 
+  },
+  initSwiper () {
+    util.$get(`${movieUrl}/api/v2/article`,
+    {app_id: 6,
+    cid: 4,
+    article_id: 0
+    }).then ( res => {
+
+      let status = res.data.status
+      if ( status === 0 ) {
+        let swiperList = res.data.data.articles.map( item => {
+           return {
+              create_time: item.create_time = util.formatTime(new Date(item.create_time), 'yyyy-MM-dd'),
+              article_id: item.article_id,
+              title: item.title,
+              video_sec: item.videos[0].video_sec,
+              thumbnails: item.thumbnails[0].url
+           }
+        })
+
+        this.setData({
+          swiperList
+        })
+         console.log(swiperList.thumbnails)
+      }
+    }) .catch( e => {
+      wx.showToast({
+        title: '网络错误',
+        icon: 'none'
+      })
+    })
   }
 })
