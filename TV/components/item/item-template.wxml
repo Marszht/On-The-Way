@@ -1,5 +1,5 @@
 <template name="itemTemplate">
-<block wx:if="{{ list }}" wx:for-item="item" wx:for-index="idx">
+<block wx:if="{{ list }}" wx:for="{{ list }}" wx:key="index">
 <!-- 视频模块 -->
 <block wx:if="{{ style_type === 2 }}" catch:tap="openDatail" data-list="{{ item }}">
 <view class="movie-list" >
