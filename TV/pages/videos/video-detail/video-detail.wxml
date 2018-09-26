@@ -1,0 +1,7 @@
+<!--pages/videos/video-detail/video-detail.wxml-->
+<view class="video-box">
+<video class="my-video" 
+src="{{ video.url }}" controls autoplay></video>
+<text class="title">{{ video.title }}</text>
+<text class='time' > 发布时间： {{ video.time }}</text>
+</view>

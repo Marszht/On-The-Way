@@ -1,0 +1,16 @@
+/* pages/videos/video-detail/video-detail.wxss */
+.my-video {
+   width:  100%;
+   height: 421.87rpx;
+}
+
+.video-box .title {
+   padding: 20rpx;
+   display:  block;
+   font-size:  35rpx;
+}
+.video-box .time {
+   font-size:  26rpx;
+   color: #979797;
+   padding: 0 20rpx;
+}

@@ -63,6 +63,7 @@ Page({
             })
             wx.stopPullDownRefresh();
             this.setData ({
+               article_id: ++this.data.article_id,
                isLoading: false
             })
          }
@@ -76,6 +77,8 @@ Page({
          }
       }
    },
+
+
    /**
     * 生命周期函数--监听页面加载
     */
@@ -154,7 +157,7 @@ Page({
                      create_time: item.create_time = util.formatTime(new Date(item.create_time), 'yyyy-MM-dd'),
                      article_id: item.article_id,
                      title: item.title,
-                     video_sec: item.videos[0].video_sec,
+                     video_src: item.videos[0].video_src,
                      thumbnails: item.thumbnails[0].url
                   }
                })
@@ -170,5 +173,24 @@ Page({
                icon: 'none'
             })
          })
+   },
+
+   //  推荐详情
+   openDetail (event) {
+      let item  = e.currentTarget.dataset.list;
+      let url = `video-detail/video-detail?title=${item.title}&time=${encodeURIComponent(item.create_time)}&url=${item.videos[0].video_src}`
+      wx.navigateTo({
+         url: url
+      })
+   },
+
+   //  滑块详情
+   onSwiperTap( event ) {
+      let item = event.currentTarget.dataset.item;
+      //  url 拼接
+      let url = `video-detail/video-detail?title=${item.title}&time=${encodeURIComponent(item.create_time)}&url=${item.video_src} `;
+   wx.navigateTo({
+      url: url,
+   })
    }
-})
+}) 
