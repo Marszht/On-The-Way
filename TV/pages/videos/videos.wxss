@@ -1,4 +1,6 @@
 /* pages/videos/videos.wxss */
+
+/*  记得模块css 和 wxml 都得引入 */
 @import  "../../components/swiper/swiper-template.wxss";
 @import  "../../components/item/item-template.wxss";
 

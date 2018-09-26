@@ -1,0 +1,46 @@
+/*  视频模块 */
+.movie-list {
+   box-shadow:  0 8rpx 16rpx 0 rgba(7,17,27,.1);
+   margin:  0 20rpx;
+   overflow: hidden;
+   border-radius:  8rpx;
+   margin-bottom:  30rpx;
+   background: #fff;
+}
+.movie-list .wrap-img {
+   height:  420rpx;
+   background-color: #ccc;
+   background-repeat:  no-repeat;
+   /* background-repeat:  repeat-y; */
+   /* 很多都没有用 */
+   background-position:  center;
+   background-size:  cover;
+   display:  flex;
+   flex-direction: column;
+   justify-content:  center;
+   align-items:  center;
+}
+.movie-list .wrap-img  .btn {
+   width:  90rpx;
+   height: 90rpx;
+   background-image:  url(http://i.gtimg.cn/qqlive/images/20150911/i1441959133_1.jpg);
+   background-size:  cover;
+   z-index: 1;
+}
+.movie-list .video-des {
+   padding: 10rpx;
+}
+.movie-list .video_title {
+   display:  block;
+   font-size: 30rpx;
+   /* 单行不换行 超出则显示为省略号 */
+   overflow:  hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   color:  #333;
+
+}
+.movie-list .video-des .time {
+   color: #979797;
+   font-size: 26rpx;
+   }
