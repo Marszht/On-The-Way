@@ -1,0 +1,25 @@
+<import src='../../plugins/wxParse/wxParse.wxml' />
+<view class="content" bindtap="btn">
+  <view class='ask clear' >
+    <image src="{{ userInfo.avatarUrl }}"></image>
+    <view class="con">
+      <view class="flex">
+        <view class="name">{{ userInfo.nickName }}</view>
+        <view class="timer">{{ item.created_at }}</view>
+      </view>
+      <view class="text pre"> {{ item.question }} </view>
+    </view>
+  </view>
+  <view class='answer clear' wx:if="{{ item.answer }}">
+    <view class="con">
+      <view class="flex">
+        <view class="name">王冰</view>
+        <view class="timer">{{ item.answer_time }}</view>
+      </view>
+      <view class="text">
+        <template is="wxParse" data="{{ wxParseData: article.nodes }}" />
+      </view>
+    </view>
+    <image src="{{ customService }}"></image>
+  </view>
+</view>

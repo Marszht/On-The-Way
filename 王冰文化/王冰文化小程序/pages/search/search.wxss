@@ -1,0 +1,30 @@
+/* pages/search/search.wxss */
+.search_wrap{
+  display:flex;
+  align-items:center;
+  padding-right:24rpx;
+  font-size:28rpx;
+}
+.search{
+  flex:1;
+  margin:14rpx 24rpx;
+  height:60rpx;
+  display:flex;
+  align-items:center;
+  border-radius:10rpx;
+  border:#f0f0f0 1rpx solid;
+}
+.search icon{
+  margin:0 16rpx;
+}
+.search_input{
+  flex:1;
+  font-size:24rpx;
+}
+.search_result{
+  padding:24rpx;
+  font-size:28rpx;
+}
+.none{
+  text-align:center;
+}

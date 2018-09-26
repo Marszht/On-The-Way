@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "talk": "../../components/talk/index"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "drak"
+}
