@@ -10,7 +10,7 @@ Page({
   data: {
     movieList: null,
     article_id: 0,
-    swiperList: null,
+    swiperList: [],
 
   },
 // getList() {
@@ -33,6 +33,11 @@ Page({
   onLoad: function (options) {
     // 加载轮播图
     this.initSwiper();
+    setTimeout(() => {
+      console.log(this.data.swiperList[0].thumbnails)
+      
+    },2000)
+    
    
 
 
@@ -100,7 +105,7 @@ Page({
               create_time: item.create_time = util.formatTime(new Date(item.create_time), 'yyyy-MM-dd'),
               article_id: item.article_id,
               title: item.title,
-              video_sec: item.videos[0].video_sec,
+              video_src: item.videos[0].video_src,
               thumbnails: item.thumbnails[0].url
            }
         })
@@ -108,7 +113,6 @@ Page({
         this.setData({
           swiperList
         })
-         console.log(swiperList.thumbnails)
       }
     }) .catch( e => {
       wx.showToast({

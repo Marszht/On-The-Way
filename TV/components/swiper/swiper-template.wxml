@@ -10,8 +10,9 @@
           wx:key="index">
           <swiper-item bind:tap="onSwiperTap"
           data-item="{{ item }}">
-          <view class="wrap-img" style="background-image: url({{ item.thumbnails }})"></view>
-          <view class="filter" wx:if= "{{ isTitle }}"></view>
+          <image class="wrap-img" style="background-image:url({{item.thumbnails}})" ></image>
+          <view class="filter" wx:if= "{{ isTitle }}">
+          <text>{{ item.title }}</text></view>
           </swiper-item>
          </block>
          </swiper>
