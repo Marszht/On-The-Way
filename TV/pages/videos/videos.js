@@ -176,7 +176,7 @@ Page({
    },
 
    //  推荐详情
-   openDetail (event) {
+   openDetail (e) {
       let item  = e.currentTarget.dataset.list;
       let url = `video-detail/video-detail?title=${item.title}&time=${encodeURIComponent(item.create_time)}&url=${item.videos[0].video_src}`
       wx.navigateTo({
