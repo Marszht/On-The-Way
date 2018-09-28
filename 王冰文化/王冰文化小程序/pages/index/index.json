@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "talk": "../../components/talk/index"
-  },
-  "enablePullDownRefresh": true,
-  "backgroundTextStyle":"drak"
-}

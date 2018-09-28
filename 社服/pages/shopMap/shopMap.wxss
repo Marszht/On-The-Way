@@ -1,5 +1,0 @@
-/* pages/shopMap/shopMap.wxss */
-.map{
-    height: 100%;
-    width: 100%;
-}

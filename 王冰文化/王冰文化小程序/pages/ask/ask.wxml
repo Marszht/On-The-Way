@@ -1,9 +1,0 @@
-<!--pages/ask/ask.wxml-->
-<view class="wrap">
-  <view class="titel">填写问题</view>
-  <view class="line"></view>
-  <view class="con-wrap">
-    <textarea class="con" bindinput="put" value="{{ con }}" placeholder="请在这里填写你要咨询的问题（限50字）" auto-focus />
-  </view>
-  <button class="btn" bindtap="btn">我要提问</button>
-</view>

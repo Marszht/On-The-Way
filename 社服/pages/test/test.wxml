@@ -1,2 +1,0 @@
-<!--pages/test/test.wxml-->
-<button bindtap="tomap">click to map</button>

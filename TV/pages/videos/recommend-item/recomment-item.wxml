@@ -1,9 +1,0 @@
-<template name="recommend-item">
-    <view class="viewo-item">
-        <view class="wrap-img">
-            <view class="btn"></view>
-            <image src="{{ item.thumbnails[0].url }}" 
-            style="height:146rpx;width:234rpx"/>
-        </view>
-    </view>
-</template>
