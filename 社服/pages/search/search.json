@@ -1,6 +1,0 @@
-{
-  "usingComponents":{
-    "search":"../../components/search/search",
-    "card":"../../components/card/index"
-  }
-}

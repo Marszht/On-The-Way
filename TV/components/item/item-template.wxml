@@ -1,8 +1,8 @@
 <template name="itemTemplate">
-<block wx:if="{{ list }}" wx:for-item="item" wx:for-index="idx">
+<block wx:if="{{ list }}" wx:for="{{ list }}" wx:key="index">
 <!-- 视频模块 -->
-<block wx:if="{{ style_type === 2 }}" catch:tap="openDatail" data-list="{{ item }}">
-<view class="movie-list" >
+<block wx:if="{{ style_type === 2 }}" >
+<view class="movie-list"  catchtap="openDetail" data-list="{{ item }}">
 <view class="wrap-img" style="background-image: url( {{item.thumbnails[0].url }})">
 <view class="btn"></view>
 </view>

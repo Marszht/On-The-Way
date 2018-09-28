@@ -1,2 +1,16 @@
-<!--pages/review/review.wxml-->
-<text>pages/review/review.wxml</text>
+<import src="../../components/swiper/swiper-template.wxml" />
+<!--  头部搜索 -->
+<view class='search-bar'>
+   <input class="search-txt" placeholder-class='search-txt-plc' bindfocus='viewSearch' placeholder='请输入关键词搜索' type='text'></input>
+</view>
+<view class='swiper'>
+    <swiper circular="true" indicator-dots="true" indicator-active-color="#2DC799" autoplay="true" interval="2000">
+      <block wx:for="{{swiperList}}" wx:for-item="item" wx:if="{{idx < 5}}" wx:for-index="idx">
+        <swiper-item bindtap="onSwiperTap" data-item="{{item}}">
+          <view class='wrap-img' style="background-image:url({{item.thumbnails}})"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+    </view>
+
+
