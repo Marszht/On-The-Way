@@ -39,7 +39,7 @@ Page({
                isLoading: true
             })
             // 如果报错看打印出的报错信息是的什么？
-            console.log( e )
+            // console.log( e )
             wx.stopPullDownRefresh();
             wx.showToast({
                title: '网络错误',
@@ -142,6 +142,9 @@ Page({
    onShareAppMessage: function () {
 
    },
+
+
+   // 轮播 
    initSwiper() {
       util.$get(`${movieUrl}/api/v2/article`,
          {

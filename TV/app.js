@@ -35,6 +35,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    movieBase: 'https://api.adline.com.cn'
+    movieBase: 'https://api.adline.com.cn',
+     musicBase: "https://api.huxiaowen.vip",
+     doubanBase: "https://douban.uieee.com"
   }
 })
