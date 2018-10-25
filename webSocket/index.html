@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>WebSocket</title>
+  <link rel="stylesheet icon" href="favio.jpg"/>
+</head>
+<body>
+  <h3>WebSocket demo</h3>
+
+  <script>
+    // new 一下就可以创建一个webSocket 实例
+    // 连接ws协议
+    // 端口号就是服务端设置的端口号
+    let ws = new WebSocket('ws://localhost:520');
+    // onopen 客户端与服务端建立连接后触发
+    ws.onopen = function () {
+      ws.send('泽良木而息，非澧泉不饮')
+    };
+// 当服务端给客户端发来消息时触发
+    ws.onmessage = function (res) {
+      console.log('onmessage.res', res)
+      console.log('onmessage res.data', res.data)
+    }
+    </script>
+
+    <!-- socket.io -->
+    <!-- <script src="/node_modules/socket.io/socket.io.js"></script>
+    <script > 
+    const socket = io('/');
+    socket.on('connect', () => {
+      console.log('连接成功');
+      socket.send('kongfu');
+    });
+    // 监听服务端发来的信息
+    socket.on('message', (msg) => {
+      console.log(`客户端接收到的消息： ${msg}`); 
+    })
+    socket.on('disconnect', () => {
+      console.log('连接断开成功');
+    })
+    </script> -->
+</body>
+</html>
