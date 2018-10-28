@@ -2,6 +2,7 @@
 
 @import  "../../components/swiper/swiper-template.wxss";
 @import  "../../components/item/item-template.wxss";
+@import  "./movie-list/movie-list-template.wxss"
 
 .search-bar {
    box-sizing:  border-box;

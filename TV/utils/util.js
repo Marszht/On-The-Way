@@ -1,6 +1,6 @@
 const wxPrase = require("./wxParse/wxParse.js").wxPrase  // 解决HTML 以及 markdown 的解析
 
-// 获取数据方法
+// 获取数据方法 promise 处理的超棒
 const $get = ( url, data ) => {
   return new Promise( (resolve, reject) => {
     wx.request({
@@ -38,8 +38,29 @@ const padLeftZero = (str) => {
   return ('00' + str).substr(str.length);
 }
 
+const convertToStarsArray = (average) => {
+  const LENGTH = 5;
+  const CLS_ON = 'on'; // 全星
+  const CLS_HALF = 'half'; // 半星
+  const CLS_OFF = 'off'; // 无星
+  let result = [];
+  let score = Math.random(average)/2;
+  let hasDecimal = score %2 !== 0;
+  let integer = Math.floor(score) ;
+  for ( let i= 0; i<integer; i++) {
+    result.push(CLS_ON);
+  } 
+  if ( hasDecimal) {
+    result.push( CLS_HALF);
+  } 
+  while (result.length < LENGTH) {
+    result.push (CLS_OFF );
+  }
+  return result;
+}
 module.exports = {
   wxPrase,
   $get,
-  formatTime
+  formatTime,
+  convertToStarsArray
 }
