@@ -15,6 +15,7 @@ Page({
       swiperList: null,
 
    },
+
    getList( type ) {
       this.setData({
          isLoading: true
@@ -48,6 +49,8 @@ Page({
             })
          })
    },
+
+   
    processData(type, list)  {
       if (list.length)  {
          list.map( v => {        // 处理时间

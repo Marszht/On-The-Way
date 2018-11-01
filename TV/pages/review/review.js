@@ -6,13 +6,15 @@ const bannerUrl = app.globalData.musicBase;
 
 Page({
    data: {
-      swiperList: []
+      swiperList: [],
+      // isLoading: true
    },
 
 
    onLoad: function(options) {
       this._initSwiperList()
-
+//  获取电影列表数据
+this
    },
    //  获取swiper数据
 _initSwiperList() {
