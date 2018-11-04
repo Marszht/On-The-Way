@@ -1,4 +1,4 @@
-
+@import  '../movie/movie-template.wxss';
 .movie-list-container {
   background-color: #fff;
   display: flex;
@@ -23,4 +23,10 @@
   width: 9rpx;
   height: 16rpx;
   vertical-align:  middle;
+}
+.movies-container {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  margin: 0 9rpx
 }

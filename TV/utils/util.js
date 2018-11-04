@@ -44,8 +44,8 @@ const convertToStarsArray = (average) => {
   const CLS_HALF = 'half'; // 半星
   const CLS_OFF = 'off'; // 无星
   let result = [];
-  let score = Math.random(average)/2;
-  let hasDecimal = score %2 !== 0;
+  let score = Math.round(average)/2;
+  let hasDecimal = score %1 !== 0;
   let integer = Math.floor(score) ;
   for ( let i= 0; i<integer; i++) {
     result.push(CLS_ON);
