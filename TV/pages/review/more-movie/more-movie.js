@@ -1,4 +1,4 @@
-const util = require('../../utils/util.js');
+const util = require('../../../utils/util.js');
 const app = getApp();
 const doubanUrl = app.globalData.doubanBase;
 Page({
@@ -18,7 +18,35 @@ Page({
   },
 
   onLoad: function (options) {
-
+    let category = options.category;
+    // console.log(options)
+    let url = '';
+    switch (category) {
+      case "正在热映":
+        url = "/v2/movie/in_theaters";
+        break;
+      case "即将上映":
+        url = "/v2/movie/coming_soon";
+        break;
+      case "豆瓣Top250":
+        url = "/v2/movie/top250";
+        break;
+      case "tag":
+        url = "/v2/movie/search";
+        this.data.sendData.tag = options.title;
+        break;
+      case "keyword":
+        url = "/v2/movie/search";
+        this.data.sendData.q = options.title;
+        break;
+    }
+    this.setData({
+      requestUrl: doubanUrl + url       // url拼接
+    })
+    wx.setNavigationBarTitle({
+      // title: (options.title),
+      title: decodeURIComponent(options.title),
+    })
   },
 
   onReady: function () {
