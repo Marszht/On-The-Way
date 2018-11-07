@@ -1,8 +1,16 @@
 
 
 @import  "../../components/swiper/swiper-template.wxss";
-@import  "../../components/item/item-template.wxss";
 
+@import  "./movie-list/movie-list-template.wxss";
+.container {
+  display: flex;
+  flex-direction: column;
+    -webkit-filter: blur(10px); /* Chrome, Opera */
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);    
+        filter: blur(10px);
+}
 .search-bar {
    box-sizing:  border-box;
    position: fixed;
@@ -40,5 +48,14 @@ swiper .wrap-img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+.movies-template {
+  margin-bottom: 30rpx;
+}
+.movies-template:last-of-type {
+  margin-bottom: 0;
+}
+.movie-container{
+  margin-bottom: 30rpx;
 }
 
