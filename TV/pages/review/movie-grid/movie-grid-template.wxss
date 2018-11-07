@@ -1,1 +1,13 @@
+@import '../movie/movie-template.wxss';
 
+.list {
+   height: 100%;
+   margin: 40rpx 9rpx 0  9rpx;
+   position: relative;
+   padding-bottom:  92rpx;
+}
+
+.single-view-container {
+   float: left;
+   margin-bottom: 20rpx;
+}
