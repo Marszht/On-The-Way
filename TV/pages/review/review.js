@@ -91,6 +91,11 @@ Page({
     wx.navigateTo({
       url: `more-movie/more-movie?category=${category}&title=${title}` ,
     })
+  },
+  toSearch(){
+     wx.navigateTo({
+        url: './search/search',
+     })
   }
 
 })

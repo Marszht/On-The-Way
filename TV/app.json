@@ -7,7 +7,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/videos/video-detail/video-detail",
-    "pages/review/more-movie/more-movie"
+    "pages/review/more-movie/more-movie",
+    "pages/review/search/search"
   ],
   "tabBar": {
     "borderStyle": "dark",

@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -55,6 +55,11 @@
 					"name": "更多",
 					"pathName": "pages/review/more-movie/more-movie",
 					"query": "category=正在热映&title=正在热映"
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/review/search/search"
 				}
 			]
 		}

@@ -1,0 +1,21 @@
+<view class="search-hd">
+  <view class="search-area">
+    <form bindsubmit="searchA">
+      <view class="search-type" 
+      bindtap="changeSearchType">{{ searchType == 'keyword'? '默认':'类型' }}</view>
+      <!--  bindconfirm -->
+      <input  type="text" class="search-txt" name="keyword"
+      confirm-type="search" bindconfirm="searchB" 
+      placeholder="{{ searchType == 'keyword'? '请输入电影标题,导演或演员': '请输入影片类型，如：爱情、喜剧'}}"/>
+      <button class="search-btn" form-type="submit">搜索</button>
+    </form>
+  </view>
+  <view class="search-keyword" wx:if="{{ hotKeyword && hotTag }}">
+    <view class="search-keyword-title" >热门搜索</view>
+    <view class="search-keyword-item"  wx:key="index"
+    >那些年</view>
+    <view class="search-keyword-title">热门标签</view>
+    <view class="search-keyword-item" wx:for="{{ hotTag }}" 
+    wx:key="index" >{{ item }}</view>
+  </view>
+</view>
