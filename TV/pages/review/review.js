@@ -76,7 +76,9 @@ Page({
         categoryTitle: categoryTitle,
         movies: list
       }
+     
     })
+     console.log("list", list)
     // console.log("movies:", list)
     //  如果请求到了数据，就不需要再loading
     if (this.data.inTheaters && this.data.comingSoon && this.data.comingSoon) {
@@ -85,9 +87,15 @@ Page({
   },
   onMoreTap(e) {
     let { category, title } = e.currentTarget.dataset;
+     console.log(e.currentTarget.dataset)
     wx.navigateTo({
       url: `more-movie/more-movie?category=${category}&title=${title}` ,
     })
+  },
+  toSearch(){
+     wx.navigateTo({
+        url: './search/search',
+     })
   }
 
 })

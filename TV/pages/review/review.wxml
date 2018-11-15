@@ -2,7 +2,11 @@
 <import src="./movie-list/movie-list-template"/>
 <!--  头部搜索 -->
 <view class='search-bar'>
-   <input class="search-txt" placeholder-class='search-txt-plc' bindfocus='viewSearch' placeholder='请输入关键词搜索' type='text'></input>
+   <input class="search-txt" 
+   placeholder-class='search-txt-plc' 
+   bindfocus='toSearch' 
+   placeholder='请输入关键词搜索' 
+   type='text'></input>
 </view>
 <!-- swiper头部swiper -->
 <view class='swiper'>

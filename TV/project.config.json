@@ -17,7 +17,7 @@
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
-	"isGameTourist": false,
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -32,11 +32,10 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -54,6 +53,12 @@
 					"id": 2,
 					"name": "更多",
 					"pathName": "pages/review/more-movie/more-movie",
+					"query": "category=正在热映&title=正在热映"
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/review/search/search",
 					"query": "category=正在热映&title=正在热映"
 				}
 			]
