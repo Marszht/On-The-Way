@@ -47,7 +47,7 @@ Page({
   //  获取电影数据
   getMovieListData(url, senData, settedKey, categoryTitle) {
     util.$get(doubanUrl + url, senData).then(res => {
-      console.log("res:", res)
+      // console.log("res:", res)
       this._processDoubanData(res.data, settedKey, categoryTitle)
     }).catch(e => {
       // 如果请求错误 则取消加载
@@ -78,7 +78,7 @@ Page({
       }
      
     })
-     console.log("list", list)
+    //  console.log("list", list)
     // console.log("movies:", list)
     //  如果请求到了数据，就不需要再loading
     if (this.data.inTheaters && this.data.comingSoon && this.data.comingSoon) {
@@ -87,7 +87,7 @@ Page({
   },
   onMoreTap(e) {
     let { category, title } = e.currentTarget.dataset;
-     console.log(e.currentTarget.dataset)
+    //  console.log(e.currentTarget.dataset)
     wx.navigateTo({
       url: `more-movie/more-movie?category=${category}&title=${title}` ,
     })
@@ -96,6 +96,14 @@ Page({
      wx.navigateTo({
         url: './search/search',
      })
+  },
+  openDetail(event) {
+    let { movieid ,title} = event.currentTarget.dataset;
+    // console.log('event', event.currentTarget.dataset)
+    
+    wx.navigateTo({
+      url: `review-detail/review-detail?id=${movieid}&title=${title}`,
+    })
   }
 
 })

@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -60,6 +60,18 @@
 					"name": "搜索",
 					"pathName": "pages/review/search/search",
 					"query": "category=正在热映&title=正在热映"
+				},
+				{
+					"id": -1,
+					"name": "review-detail",
+					"pathName": "pages/review/review-detail/review-detail",
+					"query": "id=3168101&title=毒液：致命守护者"
+				},
+				{
+					"id": -1,
+					"name": "personDetail",
+					"pathName": "pages/review/person-detail/person-detail",
+					"query": "id=1049489&title=汤姆·哈迪"
 				}
 			]
 		}

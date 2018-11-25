@@ -37,3 +37,11 @@ input {
     filter: blur(0px);
   }
 }
+
+/* 隐藏滚动条 */
+
+::-webkit-scrollbar{  
+  height: 0;
+  width: 0;
+  color: transparent;
+}

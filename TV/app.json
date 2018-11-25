@@ -8,7 +8,9 @@
     "pages/logs/logs",
     "pages/videos/video-detail/video-detail",
     "pages/review/more-movie/more-movie",
-    "pages/review/search/search"
+    "pages/review/search/search",
+    "pages/review/review-detail/review-detail",
+    "pages/review/person-detail/person-detail"
   ],
   "tabBar": {
     "borderStyle": "dark",

@@ -1,6 +1,13 @@
 /* pages/videos/video-detail/video-detail.wxss */
 @import "../recommend-item/recommend-item.wxss";
+page {
+  left: 0;
+  position: relative;
+  top: 0;
+}
 .my-video {
+  /* position: absolute; */
+  /* z-index: 999; */
     width: 100%;
     height: 421.87rpx;
 }

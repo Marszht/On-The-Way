@@ -16,7 +16,7 @@ Page({
   },
   goToIndex () {
     wx.switchTab({
-      url: '../music/music',
+      url: '../videos/videos',
     })
   },
 
@@ -27,8 +27,13 @@ Page({
     wx.setNavigationBarTitle({
       title: '狗蛋TV'
     })
+    // this.onGotUserInfo()
   },
 
+// 获取用户信息
+  onGotUserInfo(e) {
+    console.log('e',e)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -61,7 +66,6 @@ Page({
     let userInfo = wx.getStorageSync('userInfo')
     let dialogComponent =  this.selectComponent('.wxc-dialog')
 
-    // 使用选择器选择组件实例节点，返回匹配到的第一个组件实例对象
     if ( !userInfo ) {
       dialogComponent && dialogComponent.show()
     } else {
