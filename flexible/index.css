@@ -1,0 +1,17 @@
+.item-section {
+  min-height: 100%;
+  background-color: #ee0a3b;
+  position: relative;
+  font-size: 12px;
+}
+
+[data-dpr="2"] .item-section {
+  font-size: 24rpx;
+}
+
+[data-dpr="3"] .item-section {
+  font-size: 36rpx;
+}
+.item-section_header {
+  
+}
