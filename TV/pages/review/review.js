@@ -86,6 +86,7 @@ Page({
     }
   },
   onMoreTap(e) {
+    // data-title=“{{}}”
     let { category, title } = e.currentTarget.dataset;
     //  console.log(e.currentTarget.dataset)
     wx.navigateTo({

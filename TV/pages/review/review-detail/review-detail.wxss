@@ -11,7 +11,7 @@
 .head-img{
   width: 100%;
   height: 320rpx;
-   -webkit-filter: blur(20rpx);
+   -webkit-filter: blur(20rpx); 
   filter: blur(20rpx);
 }
 .head-img-hover {
