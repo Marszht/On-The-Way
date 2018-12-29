@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CORS 跨域</title>
+</head>
+<body>
+ <h3>CORS 跨域</h3>
+ <script>
+  //  简单的ajax请求
+  var xhr = null
+  // 简单的兼容性处理
+  if (window.XMLHttpRequest) {
+    xhr = new XMLHttpRequest()
+  } else {
+    xhr = new ActiveXObject('Microsoft.XMLHTTP')
+  }
+  // 请求头中会默get post 请求
+  // 然后再后端中添加PUT...等其他请求
+  // GET 请求
+  // xhr.open('GET', 'http://localhost:1314')
+  //  POST请求
+  // xhr.open('POST', 'http://localhost:1314')
+  // PUT 算是复杂请求
+  xhr.open('PUT', 'http://localhost:1314')
+  xhr.setRequestHeader('token', 'mars')
+  // 携带cookie
+  xhr.withCredentials = true;  
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4) {
+      var status = xhr.status
+      if (status === 200) {
+        // 变成JSON 字符串 
+        var response = JSON.stringify(xhr.responseText)
+        console.log('response', response)
+        console.log('header=', xhr.getAllResponseHeaders())
+      }
+    }
+  }
+  xhr.send()
+ </script>
+</body>
+</html>
